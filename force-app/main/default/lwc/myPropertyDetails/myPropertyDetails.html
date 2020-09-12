@@ -1,0 +1,114 @@
+<template>
+    <template if:true={propertyFound}>
+        <lightning-layout multiple-rows style="background-color: azure;">
+            <div style="margin-top: 2%;">
+                <lightning-formatted-rich-text style="color: brown; font-weight: bold;" value={property.Property_Description__c}></lightning-formatted-rich-text>
+            </div>
+            <div class="slds-box slds-grid slds-wrap slds-p-around_small" style="margin-top: 2%; width: 100%;">
+                <div class="slds-col">
+                    <lightning-formatted-rich-text value={property.Property_Main_Image__c}></lightning-formatted-rich-text>
+                </div>
+                <div class="slds-col">
+                    <div class="slds-col slds-border_bottom">
+                        <lightning-layout multiple-rows>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Bedroom">Bedroom</p>
+                                    <p>{property.No_of_Bedroom__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Bathroom">Bathroom</p>
+                                    <p>{property.No_of_Bathroom__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Balcony">Balcony</p>
+                                    <p>{property.No_of_Balcony__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>                        
+                    </div>
+
+                    <div class="slds-border_bottom">
+                        <lightning-layout>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Covered Area">Covered Area</p>
+                                    <p>{property.Covered_Area_sqft__c} sqft</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Carpet Area">Carpet Area</p>
+                                    <p>{property.Carpet_Area_sqft__c} sqft</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Furnished Type">Furnished Type</p>
+                                    <p>{property.Furnished_Type__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Furnishing Available">Furnishing Available</p>
+                                    <p>{property.Furnishing_Available__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>                        
+                    </div>
+
+                    <div class="slds-border_bottom">
+                        <lightning-layout>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Electricity Status">Electricity Status</p>
+                                    <p>{property.Electricity_Status__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Water Availability">Water Availability</p>
+                                    <p>{property.Water_Availability__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>                        
+                    </div>
+
+                    <div class="slds-border_bottom">
+                        <lightning-layout>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Floor">Floor</p>
+                                    <p>{property.Floor__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Facing">Facing</p>
+                                    <p>{property.Facing__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Status">Status</p>
+                                    <p>{property.Status__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                            <lightning-layout-item padding="around-small">
+                                <div class="header-column">
+                                    <p class="field-title" title="Available From">Available From</p>
+                                    <p>{property.Available_From__c}</p>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>                        
+                    </div>
+
+                </div>
+            </div>
+        </lightning-layout>
+    </template>
+</template>
